@@ -1,0 +1,17 @@
+.rules{
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.exit{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

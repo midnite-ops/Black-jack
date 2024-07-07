@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="jack-rules.css">
+    <link rel="stylesheet" href="jack.css">
+    <title>Blackjack</title>
+</head>
+<body>
+    <section class="container header-section">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="row w-100">
+                    <div class="col-6">
+                        <button class="btn btn-outline-light fw-bold js-game-rules">Game Rules</button>
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-outline-light fw-bold js-restart-btn">Restart</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </section>
+    <video class="video" autoplay loop muted>
+        <source src="assets/istockphoto-1368424587-640_adpp_is.mp4" type="video/mp4">
+    </video>
+    <section class="contain">
+        <div class="game">
+            <h1>Welcome to the Blackjack game</h1>
+            <div class="deal-card-div js-deal-card">
+                <div class="text-center deal">
+                    <p>Let's start the game, shall we?</p>
+                    <button class="js-btn btn-deal">Deal cards</button>
+                </div>
+                <div class="js-result result">
+                </div>
+                <p class="victory"></p>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <script type="module" src="jack.js"></script>
+</body>
+</html>
