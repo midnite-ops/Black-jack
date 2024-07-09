@@ -1,0 +1,34 @@
+.spade{
+    width: 20px;
+    object-fit: contain;
+}
+.header-section{
+    align-items: center;
+    background-color: rgb(53, 1, 41);
+}
+.header-section > *{
+    color: white;
+}
+.btn-rules{
+    margin-right: 10px;
+}
+.btn-rules, .btn-restart{
+    padding: 8px 20px;
+    border: 1px solid white;
+    background-color: rgb(53, 1, 41);
+    color: white;
+    border-radius: 5px;
+}
+.game-rules-link{
+    text-decoration: none;
+    color: white;
+}
+.btn-restart:hover, .btn-rules:hover{
+    background-color: white;
+    color: rgb(53, 1, 41);
+    transition: 0.15s;
+}
+.nav-links{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}

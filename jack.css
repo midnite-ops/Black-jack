@@ -1,19 +1,14 @@
 body{
     margin: 0;
 }
+.welcome{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 p, button{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 button:hover{
     cursor: pointer;
-}
-.header-section{
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
-    padding-top: 20px;
 }
 .video{
     z-index: 0;
@@ -37,7 +32,7 @@ button:hover{
 }
 .game{
     display: flex;
-    background-color: rgba(255, 255, 255);
+    background-color: rgb(53, 1, 41);
     z-index: 20;
     align-items: center;
     flex-direction: column;
@@ -46,10 +41,7 @@ button:hover{
     padding: 25px 50px;
     border-radius: 10px;
     box-shadow: 10px 10px 5px #000000;
-}
-.game h1{
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 .game > p {
     font-size: 16px;
@@ -59,9 +51,15 @@ button:hover{
     padding: 10px 30px;
     font-size: 16px;
     font-weight: bold;
-    background-color: white;
-    border: 1px solid gray;
+    background-color: rgb(53, 1, 41);
+    border: 1px solid white;
     border-radius: 5px;
+    color: white;
+}
+.btn-deal:hover{
+    background-color: rgb(176, 21, 21);
+    border: none;
+    transition: 0.15s;
 }
 .result{
     display: flex;
@@ -83,9 +81,10 @@ button:hover{
 .btn-choice{
     padding: 8px 20px;
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 5px;
     margin-right: 10px;
+    color: white;
 }
 .btn-choice:hover{
     background-color: rgb(176, 21, 21);
@@ -104,14 +103,19 @@ button:hover{
     flex-direction: column;
 }
 
-@media (max-width: 563px) {
-    .video{
-        background-color: red;
-    }
+@media (max-width: 576px) {
    .contain{
-    padding: 0px 50px;
+    padding: 0px 35px;
    }
    .game{
     text-align: center;
+    padding: 20px 0px;
+   }
+   .game h1{
+    font-size: 25px;
+    font-weight: bold;
+   }
+   .moves-div{
+    flex-direction: column;
    }
 }

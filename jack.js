@@ -1,4 +1,4 @@
-import { rulesHtml } from "./jack-rules.js";
+import { loop } from "./jack-add-cards.js";
 let gameResult = ''
 
 // The cards for the game
@@ -13,11 +13,10 @@ document.querySelector('.js-btn').addEventListener('click', () => {
 })
 
 //This code restarts the game when the restart button is clicked
-document.querySelector('.js-restart-btn').addEventListener('click', () => {
-    location.reload();
-})
-document.querySelector('.js-game-rules').addEventListener('click', () => {
-    rulesHtml();
+document.querySelectorAll('.js-restart-btn').forEach((value) => {
+    value.addEventListener('click', () => {
+        location.reload();
+    })
 })
 
 //Created the player and computer profiles
@@ -40,23 +39,7 @@ function dealCard(){
 }
 
 //This function adds the values in an array and returns the result
-function loop(index){
-    let result = 0
-    for(let i = 0; i < index.length; i++){
-       let spot = index[i];
-       if(spot === 'Q'  ||  spot === 'J'  ||  spot === 'K'){
-        spot = 10;
-       }else if(spot === 'A'){
-        spot = 11;
-       }
-       if(result === 0){
-        result = spot;
-       }else{
-        result += spot;
-       }
-    }
-    return result;
-}
+
 function render(){
     let gameHTML = `
         <div class = 'moves-div'>

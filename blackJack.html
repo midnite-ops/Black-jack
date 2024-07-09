@@ -4,36 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="jack-rules.css">
+    <link rel="stylesheet" href="jack-nav.css">  
     <link rel="stylesheet" href="jack.css">
     <title>Blackjack</title>
 </head>
 <body>
-    <section class="container header-section">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="row w-100">
-                    <div class="col-6">
-                        <button class="btn btn-outline-light fw-bold js-game-rules">Game Rules</button>
-                    </div>
-                    <div class="col-6 text-end">
-                        <button class="btn btn-outline-light fw-bold js-restart-btn">Restart</button>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-    </section>
+  <nav class="navbar navbar-expand-lg header-section">
+    <div class="container">
+      <div class="col-4 d-flex align-center nav-links">
+        <a class="navbar-brand fw-bold text-light" href="#">Blackjack
+          <img src="assets/spade.webp" alt="A Spade" class="spade">
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 d-flex justify-content-between nav-links">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link actiive text-light" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-light" href="#">Pricing</a>
+          </li>
+          <li class="nav-item d-lg-none d-sm-block">
+            <a class="nav-link active js-rules-btn text-light" href="blackjack-rules.html" target="_blank">Game Rules</a>
+          </li>
+          <li class="nav-item d-lg-none d-sm-block">
+            <a class="nav-link active js-restart-btn text-light" href="#">Restart</a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+        <div class="d-none d-lg-block">
+          <a href="blackjack-rules.html" class="game-rules-link">
+            <button class="js-rules-btn btn-rules">
+              Game Rules
+            </button>
+          </a>
+          <button class="js-restart-btn btn-restart">Restart</button>
+        </div>
+      </div>
+    </div>
+  </nav>
     <video class="video" autoplay loop muted>
         <source src="assets/istockphoto-1368424587-640_adpp_is.mp4" type="video/mp4">
     </video>
     <section class="contain">
         <div class="game">
-            <h1>Welcome to the Blackjack game</h1>
+            <h1 class="welcome">Welcome to the Blackjack game</h1>
             <div class="deal-card-div js-deal-card">
                 <div class="text-center deal">
                     <p>Let's start the game, shall we?</p>
