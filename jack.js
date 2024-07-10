@@ -1,8 +1,9 @@
 import { loop } from "./jack-add-cards.js";
+import { cards } from "./js-files/js-card-img.js";
 let gameResult = ''
 
 // The cards for the game
-const blackJackCard = [1,2,3,4,5,6,7,8,9,10,'A','Q','J','K'];
+// const blackJackCard = [1,2,3,4,5,6,7,8,9,10,'A','Q','J','K'];
 
 //This code runs when the deal card button is clicked
 document.querySelector('.js-btn').addEventListener('click', () => {
@@ -24,6 +25,7 @@ const player = {
     playerMove: [dealCard(), dealCard()],
     result: 0
 }
+
 const computer = {
     computerMove: [dealCard(), dealCard()],
     result: 0
@@ -33,8 +35,8 @@ const playerHand = player.playerMove;
 
 //This function takes a random value from the blackJackCard variable
 function dealCard(){
-    const random = Math.floor(Math.random() * blackJackCard.length);
-    const randomIndex = blackJackCard[random];
+    const random = Math.floor(Math.random() * cards.length);
+    const randomIndex = cards[random];
     return randomIndex;
 }
 
@@ -43,8 +45,16 @@ function dealCard(){
 function render(){
     let gameHTML = `
         <div class = 'moves-div'>
-            <p>Jesse's hand: ${compHand} = ${computer.result}</p>
-            <p>Player hand: ${playerHand} = ${player.result}</p>
+            <div class = 'moves-div-play'>
+                <p>Jesse's hand:</p>
+                <img src = ${compHand[0].card} class = 'cards'>  
+                <img src = ${compHand[1].card} class = 'cards'> 
+            </div>
+            <div class = 'moves-div-play'>
+                <p>Player's hand:</p>
+                <img src = ${playerHand[0].card} class = 'cards'>  
+                <img src = ${playerHand[1].card} class = 'cards'> 
+            </div>
         </div>`;
     document.querySelector('.js-result').innerHTML = gameHTML;
 }
@@ -52,6 +62,7 @@ function addResults(){
     player.result = loop(playerHand);
     computer.result = loop(compHand);
 }
+console.log(playerHand)
 function blackJack(){
     if(player.result === 21){
         gameResult = 'You win';

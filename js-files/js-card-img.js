@@ -1,157 +1,157 @@
-const cards = [{
-    card: `Assets/cards/diamond-ace.jpg`,
-    value: 11
+export const cards = [{
+    card: 'Assets/cards/seafare-diamond-ace.jpg',
+    value: 'A'
 },{
-    card: `Assets/cards/diamond-2.jpg`,
+    card: 'Assets/cards/seafare-diamond-2.jpg',
     value: 2
 },{
-    card: `Assets/cards/diamond-3.jpg`,
+    card: 'Assets/cards/seafare-diamond-3.jpg',
     value: 3
 },{
-    card: `Assets/cards/diamond-4.jpg`,
+    card: 'Assets/cards/seafare-diamond-4.jpg',
     value: 4
 },{
-    card: `Assets/cards/diamond-5.jpg`,
+    card: 'Assets/cards/seafare-diamond-5.jpg',
     value: 5
 },{
-    card: `Assets/cards/diamond-6.jpg`,
+    card:'Assets/cards/seafare-diamond-6.jpg',
     value: 6
 },{
-    card: `Assets/cards/diamond-7.jpg`,
+    card: 'Assets/cards/seafare-diamond-7.jpg',
     value: 7
 },{
-    card: `Assets/cards/diamond-8.jpg`,
+    card: 'Assets/cards/seafare-diamond-8.jpg',
     value: 8
 },{
-    card: `Assets/cards/diamond-9.jpg`,
+    card: 'Assets/cards/seafare-diamond-9.jpg',
     value: 9
 },{
-    card: `Assets/cards/diamond-10.jpg`,
+    card: 'Assets/cards/seafare-diamond-10.jpg',
     value: 10
 },{
-    card: `Assets/cards/diamond-J.jpg`,
-    value: 10
+    card: 'Assets/cards/seafare-diamond-J.jpg',
+    value: 'J'
 },{
-    card: `Assets/cards/diamond-Q.jpg`,
-    value: 10
+    card: 'Assets/cards/seafare-diamond-Q.jpg',
+    value: 'Q'
 },{
-    card: `Assets/cards/diamond-K.jpg`,
-    value: 10
+    card: 'Assets/cards/seafare-diamond-K.jpg',
+    value: 'K'
 },{
-    card: `Assets/cards/love-ace.jpg`,
-    value: 11
+    card: `Assets/cards/seafare-love-ace.jpg`,
+    value: 'A'
 },{
-    card: `Assets/cards/love-2.jpg`,
+    card: `Assets/cards/seafare-love-2.jpg`,
     value: 2
 },{
-    card: `Assets/cards/love-3.jpg`,
+    card: `Assets/cards/seafare-love-3.jpg`,
     value: 3
 },{
-    card: `Assets/cards/love-4.jpg`,
+    card: `Assets/cards/seafare-love-4.jpg`,
     value: 4
 },{
-    card: `Assets/cards/love-5.jpg`,
+    card: `Assets/cards/seafare-love-5.jpg`,
     value: 5
 },{
-    card: `Assets/cards/love-6.jpg`,
+    card: `Assets/cards/seafare-love-6.jpg`,
     value: 6
 },{
-    card: `Assets/cards/love-7.jpg`,
+    card: `Assets/cards/seafare-love-7.jpg`,
     value: 7
 },{
-    card: `Assets/cards/love-8.jpg`,
+    card: `Assets/cards/seafare-love-8.jpg`,
     value: 8
 },{
-    card: `Assets/cards/love-9.jpg`,
+    card: `Assets/cards/seafare-love-9.jpg`,
     value: 9
 },{
-    card: `Assets/cards/love-10.jpg`,
+    card: `Assets/cards/seafare-love-10.jpg`,
     value: 10
 },{
-    card: `Assets/cards/love-J.jpg`,
-    value: 10
+    card: `Assets/cards/seafare-love-J.jpg`,
+    value: 'J'
 },{
-    card: `Assets/cards/love-Q.jpg`,
-    value: 10
+    card: `Assets/cards/seafare-love-Q.jpg`,
+    value: 'Q'
 },{
-    card: `Assets/cards/love-K.jpg`,
-    value: 10
+    card: `Assets/cards/seafare-love-K.jpg`,
+    value: 'K'
 },{
-    card: `Assets/cards/spade-ace.jpg`,
-    value: 11
+    card: `Assets/cards/seafare-spade-ace.jpg`,
+    value: 'A'
 },{
-    card: `Assets/cards/spade-2.jpg`,
+    card: `Assets/cards/seafare-spade-2.jpg`,
     value: 2
 },{
-    card: `Assets/cards/spade-3.jpg`,
+    card: `Assets/cards/seafare-spade-3.jpg`,
     value: 3
 },{
-    card: `Assets/cards/spade-4.jpg`,
+    card: `Assets/cards/seafare-spade-4.jpg`,
     value: 4
 },{
-    card: `Assets/cards/spade-5.jpg`,
+    card: `Assets/cards/seafare-spade-5.jpg`,
     value: 5
 },{
-    card: `Assets/cards/spade-6.jpg`,
+    card: `Assets/cards/seafare-spade-6.jpg`,
     value: 6
 },{
-    card: `Assets/cards/spade-7.jpg`,
+    card: `Assets/cards/seafare-spade-7.jpg`,
     value: 7
 },{
-    card: `Assets/cards/spade-8.jpg`,
+    card: `Assets/cards/seafare-spade-8.jpg`,
     value: 8
 },{
-    card: `Assets/cards/spade-9.jpg`,
+    card: `Assets/cards/seafare-spade-9.jpg`,
     value: 9
 },{
-    card: `Assets/cards/spade-10.jpg`,
+    card: `Assets/cards/seafare-spade-10.jpg`,
     value: 10
 },{
-    card: `Assets/cards/spade-J.jpg`,
-    value: 10
+    card: `Assets/cards/seafare-spade-J.jpg`,
+    value: 'J'
 },{
-    card: `Assets/cards/spade-Q.jpg`,
-    value: 10
+    card: `Assets/cards/seafare-spade-Q.jpg`,
+    value: 'Q'
 },{
-    card: `Assets/cards/spade-K.jpg`,
-    value: 10
+    card: `Assets/cards/seafare-spade-K.jpg`,
+    value: 'K'
 },{
-    card: `Assets/cards/tree-ace.jpg`,
-    value: 11
+    card: `Assets/cards/seafare-tree-ace.jpg`,
+    value: 'A'
 },{
-    card: `Assets/cards/tree-2.jpg`,
+    card: `Assets/cards/seafare-tree-2.jpg`,
     value: 2
 },{
-    card: `Assets/cards/tree-3.jpg`,
+    card: `Assets/cards/seafare-tree-3.jpg`,
     value: 3
 },{
-    card: `Assets/cards/tree-4.jpg`,
+    card: `Assets/cards/seafare-tree-4.jpg`,
     value: 4
 },{
-    card: `Assets/cards/tree-5.jpg`,
+    card: `Assets/cards/seafare-tree-5.jpg`,
     value: 5
 },{
-    card: `Assets/cards/tree-6.jpg`,
+    card: `Assets/cards/seafare-tree-6.jpg`,
     value: 6
 },{
-    card: `Assets/cards/tree-7.jpg`,
+    card: `Assets/cards/seafare-tree-7.jpg`,
     value: 7
 },{
-    card: `Assets/cards/tree-8.jpg`,
+    card: `Assets/cards/seafare-tree-8.jpg`,
     value: 8
 },{
-    card: `Assets/cards/tree-9.jpg`,
+    card: `Assets/cards/seafare-tree-9.jpg`,
     value: 9
 },{
-    card: `Assets/cards/tree-10.jpg`,
+    card: `Assets/cards/seafare-tree-10.jpg`,
     value: 10
 },{
-    card: `Assets/cards/tree-J.jpg`,
-    value: 10
+    card: `Assets/cards/seafare-tree-J.jpg`,
+    value: 'J'
 },{
-    card: `Assets/cards/tree-Q.jpg`,
-    value: 10
+    card: `Assets/cards/seafare-tree-Q.jpg`,
+    value: 'Q'
 },{
-    card: `Assets/cards/tree-K.jpg`,
-    value: 10
+    card: `Assets/cards/seafare-tree-K.jpg`,
+    value: 'K'
 }]
