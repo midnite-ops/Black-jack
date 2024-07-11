@@ -1,9 +1,6 @@
-import { loop } from "./jack-add-cards.js";
+import { loop } from "./js-files/jack-add-cards.js";
 import { cards } from "./js-files/js-card-img.js";
 let gameResult = ''
-
-// The cards for the game
-// const blackJackCard = [1,2,3,4,5,6,7,8,9,10,'A','Q','J','K'];
 
 //This code runs when the deal card button is clicked
 document.querySelector('.js-btn').addEventListener('click', () => {
@@ -40,36 +37,46 @@ function dealCard(){
     return randomIndex;
 }
 
-//This function adds the values in an array and returns the result
 
 function render(){
+    const player = cardLength(playerHand);
+    const computer = cardLength(compHand);
     let gameHTML = `
         <div class = 'moves-div'>
             <div class = 'moves-div-play'>
                 <p>Jesse's hand:</p>
-                <img src = ${compHand[0].card} class = 'cards'>  
-                <img src = ${compHand[1].card} class = 'cards'> 
+                ${computer}
             </div>
             <div class = 'moves-div-play'>
                 <p>Player's hand:</p>
-                <img src = ${playerHand[0].card} class = 'cards'>  
-                <img src = ${playerHand[1].card} class = 'cards'> 
+                ${[player]} 
             </div>
         </div>`;
     document.querySelector('.js-result').innerHTML = gameHTML;
 }
+function cardLength(index){
+    let cardHtml = '';
+    for(let i = 0; i < index.length; i++){
+        const spot = index[i]
+        const cardValue = spot.card;
+        cardHtml += 
+        `<img src = ${cardValue} class = 'cards'>`
+    }
+    return cardHtml;
+}
+console.log(cardLength(playerHand));
 function addResults(){
     player.result = loop(playerHand);
     computer.result = loop(compHand);
+    console.log(player, computer)
 }
-console.log(playerHand)
 function blackJack(){
     if(player.result === 21){
-        gameResult = 'You win';
+        gameResult = 'You got a black jack, you win';
         document.querySelector('.victory').innerHTML = gameResult;
         restart();
     }else if(computer.result === 21){
-        gameResult = 'You lose';
+        gameResult = 'Jesse has a black jack, you lose';
         document.querySelector('.victory').innerHTML = gameResult;
         restart();
     }else{
@@ -91,7 +98,7 @@ function blackJack(){
                 restart();
                }else if(player.result === 21){
                 render();
-                gameResult = 'You win';
+                gameResult = 'You got a black jack, you win';
                 document.querySelector('.victory').innerHTML = gameResult;
                 restart();
                }
@@ -168,26 +175,24 @@ function newCard(){
 }
 function restart(){
     setTimeout(() => {
-        if(gameResult === 'You lose'  ||  gameResult === 'You win'){
-            document.querySelector('.js-deal-card').innerHTML = `
-            <p>Do you want to restart the game?</p>
-            <div>
-                <button class = 'btn-choice js-restart' data-restart-id = 'R1'>
-                    Yes
-                </button>
-                <button class = 'btn-choice js-restart' data-restart-id = 'R2'>
-                    No
-                </button>
-            </div>
-            `
-        }
+        document.querySelector('.js-deal-card').innerHTML = `
+        <p>Do you want to restart the game?</p>
+        <div>
+            <button class = 'btn-choice js-restart' data-restart-id = 'R1'>
+                Yes
+            </button>
+            <button class = 'btn-choice js-restart' data-restart-id = 'R2'>
+                No
+            </button>
+        </div>
+        `
         document.querySelectorAll('.js-restart').forEach((value) => {
             value.addEventListener('click', () => {
                 const restart = value.dataset.restartId;
                 if(restart === 'R1'){
                     location.reload();
                 }else if(restart === 'R2'){
-                    document.querySelector('.js-deal-card').innerHTML = 'Thanks for playing';
+                    document.querySelector('.js-deal-card').innerHTML = `<p>Thanks for playing</p>`;
                 }
             })
         })
