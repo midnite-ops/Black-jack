@@ -58,7 +58,7 @@ button:hover{
 }
 .btn-deal:hover{
     background-color: rgb(176, 21, 21);
-    border: none;
+    border-color: rgb(176, 21, 21);
     transition: 0.15s;
 }
 .result{

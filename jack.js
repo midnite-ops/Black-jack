@@ -81,30 +81,24 @@ function blackJack(){
         restart();
     }else{
         if(player.result > 21){
-            if(playerHand.includes('A')){
-               playerHand.forEach((value,index) => {
-                if(value === 'A'){
-                    playerHand[index] = 1;
+            let aceCard = '';
+            let newResult = 0;
+            playerHand.forEach((num, index) => {
+                if(num.value === 'A'){
+                    playerHand[index].value = 1;
+                    aceCard = 'A' 
                 }
-               })
-               let newResult = 0;
-               playerHand.forEach((value) => {
-                newResult += value;
-               })
-               player.result = newResult;
-               if(player.result !== 21){
-                gameResult = 'You lose';
-                document.querySelector('.victory').innerHTML = gameResult;
-                restart();
-               }else if(player.result === 21){
-                render();
-                gameResult = 'You got a black jack, you win';
-                document.querySelector('.victory').innerHTML = gameResult;
-                restart();
-               }
-               else{
-                newCard();
-               }
+                newResult += num.value;
+            })
+            player.result = newResult;
+            if(aceCard === 'A'){
+                if(player.result > 21){
+                    gameResult = 'You lose';
+                    document.querySelector('.victory').innerHTML = gameResult;
+                    restart();
+                }else{
+                    newCard();
+                }
             }else{
                 gameResult = 'You lose';
                 document.querySelector('.victory').innerHTML = gameResult;
