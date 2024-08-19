@@ -1,6 +1,7 @@
 import { loop } from "./js-files/jack-add-cards.js";
 import { cards } from "./js-files/js-card-img.js";
-let gameResult = ''
+let gameResult = '';
+const duplicate = [];
 
 //This code runs when the deal card button is clicked
 document.querySelector('.js-btn').addEventListener('click', () => {
@@ -30,14 +31,32 @@ const computer = {
 const compHand = computer.computerMove;
 const playerHand = player.playerMove;
 
+//This function adds the computer and player score
+function addResults(){
+    player.result = loop(playerHand);
+    computer.result = loop(compHand);
+    console.log(player.result, 'player')
+    console.log(computer.result, 'computer');
+}
+
 //This function takes a random value from the blackJackCard variable
 function dealCard(){
     const random = Math.floor(Math.random() * cards.length);
     const randomIndex = cards[random];
-    return randomIndex;
+    const twin = randomIndex.card;
+    if(duplicate.includes(twin)){
+        console.log('fish')
+        console.log(playerHand, 'player')
+        console.log(compHand,'coputer')
+        return dealCard();
+    }else{
+        duplicate.push(twin)
+        return randomIndex;
+    }
 }
 
 
+//This function renders or displays the player and computer move
 function render(){
     const player = cardLength(playerHand);
     const computer = cardLength(compHand);
@@ -45,15 +64,21 @@ function render(){
         <div class = 'moves-div'>
             <div class = 'moves-div-play'>
                 <p>Jesse's hand:</p>
-                ${computer}
+                <div class = 'card-move'>
+                    ${computer}
+                </div>
             </div>
             <div class = 'moves-div-play'>
                 <p>Player's hand:</p>
-                ${[player]} 
+                <div class = 'card-move'>
+                    ${player}
+                </div>
             </div>
         </div>`;
     document.querySelector('.js-result').innerHTML = gameHTML;
 }
+
+//This function takes several arguments that loop through an array and returns a variable containing an image tag
 function cardLength(index){
     let cardHtml = '';
     for(let i = 0; i < index.length; i++){
@@ -64,12 +89,8 @@ function cardLength(index){
     }
     return cardHtml;
 }
-console.log(cardLength(playerHand));
-function addResults(){
-    player.result = loop(playerHand);
-    computer.result = loop(compHand);
-    console.log(player, computer)
-}
+
+//This function checks for a blackjack, it checks if the player or computer has gotten a black jack or if they have exceeded the blackjack number and it determines if they won or lost
 function blackJack(){
     if(player.result === 21){
         gameResult = 'You got a black jack, you win';
@@ -96,7 +117,12 @@ function blackJack(){
                     gameResult = 'You lose';
                     document.querySelector('.victory').innerHTML = gameResult;
                     restart();
-                }else{
+                }else if(player.result === 21){
+                    gameResult = 'You win';
+                    document.querySelector('.victory').innerHTML = gameResult;
+                    restart();
+                }
+                else{
                     newCard();
                 }
             }else{
@@ -113,6 +139,8 @@ function blackJack(){
         }
     }
 }
+
+//This function is called when the player requests for a new card
 function newCard(){
     setTimeout(() =>{
         let card = `
@@ -167,6 +195,8 @@ function newCard(){
         })
     },2000);
 }
+
+//This function is used to restart the game
 function restart(){
     setTimeout(() => {
         document.querySelector('.js-deal-card').innerHTML = `
@@ -192,5 +222,4 @@ function restart(){
         })
     },2000)
 }
-
 

@@ -3,6 +3,7 @@ body{
 }
 .welcome{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 p, button{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -103,6 +104,10 @@ button:hover{
 .cards{
     width: 50px;
 }
+.card-move{
+    display: inline-flex;
+    gap: 10px;
+}
 .deal-card-div{
     width: 100%;
     display: flex;
@@ -117,7 +122,8 @@ button:hover{
    }
    .game{
     text-align: center;
-    padding: 20px 0px;
+    padding: 40px 20px;
+    gap: 10px;
    }
    .game h1{
     font-size: 25px;
@@ -125,5 +131,23 @@ button:hover{
    }
    .moves-div{
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
    }
+   .moves-div-play{
+    display: flex;
+    flex-direction: column;
+   }
+   .moves-div-play p{
+    margin: 0;
+   }
+   .new-card-div{
+    margin-top: 30px
+   }
+   .deal-card-div{
+    gap: 20px;
+   }
+   .card-move{
+    line-height: 50px;
+}
 }
